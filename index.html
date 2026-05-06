@@ -1,144 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anubhav Singh | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f8fafc, #e2e8f0);
-      color: #1e293b;
-    }
-    .hero {
-      background: linear-gradient(to right, #2563eb, #1d4ed8);
-      color: white;
-    }
-    .project-card {
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anubhav Singh | Full-Stack Mobile Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <header class="hero py-16 text-center">
-    <img src="raj.jpeg" alt="Anubhav Singh" class="w-32 h-32 rounded-full mx-auto shadow-lg border-4 border-white">
-    <h1 class="text-4xl font-bold mt-4">Anubhav Singh</h1>
-    <p class="text-xl mt-2">Aspiring Software Engineer | Android Developer | MCA AI-ML</p>
-    <p class="mt-4 max-w-2xl mx-auto">
-      Graduate in Computer Applications (BCA, 8.82 CGPA) and currently pursuing MCA in AI & ML at Chandigarh University. 
-      Passionate about building impactful Android apps and solving problems through Data Structures and Algorithms. 
-      Constant learner aiming to create scalable and innovative software solutions.
-    </p>
-    <div class="mt-6 space-x-6">
-   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rajsinghrajput7002@gmail.com" target="_blank" class="text-white text-2xl">
-  <i class="fas fa-envelope"></i>
-</a>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
-      <a href="https://github.com/ASRcodes" target="_blank" class="text-white text-2xl"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/anubhav-singh-rajput-9b0632251/" target="_blank" class="text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-logo">AS<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:rajsinghrajput7002@gmail.com" class="nav-cta">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="about">
+    <div class="hero-bg-text">ANUBHAV</div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="line">Anubhav</span>
+        <span class="line accent">Singh</span>
+      </h1>
+      <div class="hero-role-chips">
+        <span class="role-chip"><i class="fab fa-android"></i> Android Dev</span>
+        <span class="role-chip"><i class="fas fa-leaf"></i> Spring Boot</span>
+        <span class="role-chip"><i class="fas fa-brain"></i> AI / ML</span>
+      </div>
+      <p class="hero-desc">
+        Full-Stack Mobile Developer building robust, user-centric applications.
+        Specializing in <strong>Native Android (Kotlin)</strong> with a growing backend
+        expertise in <strong>Java &amp; Spring Boot</strong>. MCA in AI &amp; ML at
+        Chandigarh University — BCA CGPA <strong>8.82</strong>.
+        Currently mastering System Design and preparing for <strong>GSoC 2026</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="mailto:rajsinghrajput7002@gmail.com" class="btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/ASRcodes" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anubhav-singh-rajput-9b0632251/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:rajsinghrajput7002@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
-  </header>
 
-  <!-- Projects Section -->
-  <section class="py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Project Card -->
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Social Media App</h3>
-        <p class="text-sm mb-4">A Firebase-based social media application for sharing posts and connecting with friends.</p>
-        <a href="https://github.com/ASRcodes/Socialize" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7235694691113984000" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner"><span class="avatar-initials">AS</span></div>
       </div>
+      <div class="float-card card-1"><i class="fab fa-android"></i><span>Android Dev</span></div>
+      <div class="float-card card-2"><i class="fas fa-fire"></i><span>Firebase</span></div>
+      <div class="float-card card-3"><i class="fas fa-leaf"></i><span>Spring Boot</span></div>
+      <div class="float-card card-4"><i class="fas fa-brain"></i><span>AI / ML</span></div>
+    </div>
 
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Chatting Application</h3>
-        <p class="text-sm mb-4">A real-time chat application built with Firebase for instant messaging.</p>
-        <a href="https://github.com/ASRcodes/Chatting_application" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7238954553096732672" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Offline Music Player</h3>
-        <p class="text-sm mb-4">An Android music player app for offline playback with a clean UI.</p>
-        <a href="https://github.com/ASRcodes/OfflineMusic_player" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7196891271016132608" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Guessing Number Game</h3>
-        <p class="text-sm mb-4">Fun Android game with multiple difficulty levels (Easy, Medium, Hard).</p>
-        <a href="https://github.com/ASRcodes/Number_guess" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7192780181336375296" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Dummy API Project</h3>
-        <p class="text-sm mb-4">Practice project to fetch and display data from dummy API endpoints.</p>
-        <a href="https://github.com/ASRcodes/LearningAPI" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7193100294359072768" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Notes App</h3>
-        <p class="text-sm mb-4">Simple note-taking app with local storage.</p>
-        <a href="https://github.com/ASRcodes/Notes_App" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7192781375026970624" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Tic Tac Toe</h3>
-        <p class="text-sm mb-4">Classic game with two modes: play with a friend or play against AI.</p>
-        <a href="https://github.com/ASRcodes/TicTacToe" target="_blank" class="text-blue-600 font-medium">GitHub</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Smart Study Planner</h3>
-        <p class="text-sm mb-4">Final year BCA project — a smart app to plan and organize study schedules.</p>
-        <a href="https://github.com/ASRcodes/StudyPlanner_MajorProject" target="_blank" class="text-blue-600 font-medium">GitHub</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">Calculator App</h3>
-        <p class="text-sm mb-4">Android calculator app with clean UI.</p>
-        <a href="https://github.com/ASRcodes/Calculator_App_project" target="_blank" class="text-blue-600 font-medium">GitHub</a>
-      </div>
-
-      <div class="project-card bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-semibold mb-2">ChatBot App</h3>
-        <p class="text-sm mb-4">Chatbot application capable of basic responses.</p>
-        <a href="https://github.com/ASRcodes/-ChatBotApp" target="_blank" class="text-blue-600 font-medium">GitHub</a> | 
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7193678953671208961" target="_blank" class="text-blue-600 font-medium">LinkedIn</a>
-      </div>
-
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- Certificate Section -->
-  <section class="py-16 bg-gray-100 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Certificates</h2>
-    <a href="https://codedamn.com/certificate/verify/c3049336b867af57437dbfb817c526745601c88a" target="_blank" class="text-blue-600 text-lg font-medium hover:underline">
-      Data Structures & Algorithms Certificate (Codedamn)
-    </a>
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>Kotlin</span><span class="sep">·</span>
+      <span>Android</span><span class="sep">·</span>
+      <span>Java</span><span class="sep">·</span>
+      <span>Spring Boot</span><span class="sep">·</span>
+      <span>Firebase</span><span class="sep">·</span>
+      <span>MySQL</span><span class="sep">·</span>
+      <span>Python</span><span class="sep">·</span>
+      <span>Flutter</span><span class="sep">·</span>
+      <span>Docker</span><span class="sep">·</span>
+      <span>REST APIs</span><span class="sep">·</span>
+      <span>MVVM</span><span class="sep">·</span>
+      <span>Git</span><span class="sep">·</span>
+      <span>Machine Learning</span><span class="sep">·</span>
+      <span>System Design</span><span class="sep">·</span>
+      <span>Kotlin</span><span class="sep">·</span>
+      <span>Android</span><span class="sep">·</span>
+      <span>Java</span><span class="sep">·</span>
+      <span>Spring Boot</span><span class="sep">·</span>
+      <span>Firebase</span><span class="sep">·</span>
+      <span>MySQL</span><span class="sep">·</span>
+      <span>Python</span><span class="sep">·</span>
+      <span>Flutter</span><span class="sep">·</span>
+      <span>Docker</span><span class="sep">·</span>
+      <span>REST APIs</span><span class="sep">·</span>
+      <span>MVVM</span><span class="sep">·</span>
+      <span>Git</span><span class="sep">·</span>
+      <span>Machine Learning</span><span class="sep">·</span>
+      <span>System Design</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-label">02 — Experience</div>
+      <h2 class="section-title">Where I've <span class="accent">Worked</span></h2>
+      <div class="timeline">
+        <div class="timeline-item featured-internship reveal">
+          <div class="timeline-left">
+            <div class="company-logo-box">SB</div>
+          </div>
+          <div class="timeline-right">
+            <div class="timeline-header">
+              <div>
+                <h3 class="role-title">Software Developer Intern</h3>
+                <p class="company-name">Satya Brand · Bangalore, Karnataka</p>
+              </div>
+              <div class="timeline-badge">Verified · Offer Letter</div>
+            </div>
+            <p class="timeline-period"><i class="fas fa-calendar-alt"></i> Dec 29, 2025 – Apr 01, 2026</p>
+            <p class="timeline-desc">
+              Worked full-time alongside the core product team on real-world client deliverables.
+              Contributed to the IJS Mobile App (Android) — an educational platform for IIT-JEE aspirants
+              focused on performance and clean UI.
+            </p>
+            <div class="offer-letter-note">
+              <i class="fas fa-file-alt"></i>
+              Offer Letter verified · Ref: SB/DO/2026/1 · Signed by Chandan Satyarthi, Proprietor
+            </div>
+            <div class="internship-project-link">
+              <span>Internship Project:</span>
+              <a href="https://github.com/IIT-JEE-School/ijs-mobile-app-android" target="_blank">
+                <i class="fab fa-github"></i> IJS Mobile App (Android)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-6 bg-gray-900 text-center text-white">
-    <p>© 2025 Anubhav Singh | Portfolio Website</p>
+  <!-- ===== PROJECTS ===== -->
+  <section class="section dark-section" id="projects">
+    <div class="container">
+      <div class="section-label light">03 — Projects</div>
+      <h2 class="section-title">What I've <span class="accent">Built</span></h2>
+
+      <!-- FLAGSHIP -->
+      <div class="projects-cat-label">
+        <i class="fas fa-layer-group"></i> Full-Stack Flagship
+      </div>
+
+      <div class="flagship-card reveal">
+        <div class="flagship-header">
+          <div>
+            <div class="flagship-tag">Android · Spring Boot · ML · Web · Full Stack</div>
+            <h3 class="flagship-title">BehavioScore</h3>
+            <p class="flagship-desc">
+              A behavioral credit scoring system built end-to-end across mobile, backend, and machine learning.
+              Users are analyzed on behavioral patterns and receive a dynamic credit score — 
+              demonstrating full-stack engineering from Android UI to Spring Boot APIs to a Python ML model.
+            </p>
+          </div>
+          <a href="https://github.com/ASRcodes/BehavioScore" target="_blank" class="flagship-gh-link">
+            <i class="fab fa-github"></i> View Repo
+          </a>
+        </div>
+        <div class="flagship-layers">
+          <div class="layer-card">
+            <div class="layer-icon android-icon"><i class="fab fa-android"></i></div>
+            <div class="layer-text">
+              <h4>Android App</h4>
+              <p>Native Kotlin frontend — user input, score display, real-time feedback UI</p>
+              <div class="layer-tech"><span>Kotlin</span><span>Android</span><span>Retrofit</span></div>
+            </div>
+          </div>
+          <div class="layer-arrow"><i class="fas fa-arrows-left-right"></i></div>
+          <div class="layer-card">
+            <div class="layer-icon backend-icon"><i class="fas fa-server"></i></div>
+            <div class="layer-text">
+              <h4>Spring Boot Backend</h4>
+              <p>REST API layer for scoring logic, user data, and cross-layer communication</p>
+              <div class="layer-tech"><span>Java</span><span>Spring Boot</span><span>MySQL</span></div>
+            </div>
+          </div>
+          <div class="layer-arrow"><i class="fas fa-arrows-left-right"></i></div>
+          <div class="layer-card">
+            <div class="layer-icon ml-icon"><i class="fas fa-brain"></i></div>
+            <div class="layer-text">
+              <h4>ML Engine</h4>
+              <p>Python-based scoring model trained to predict and classify behavioral credit scores</p>
+              <div class="layer-tech"><span>Python</span><span>ML</span><span>Pandas</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHTED PROJECTS -->
+      <div class="projects-cat-label" style="margin-top:52px;">
+        <i class="fas fa-star"></i> Highlighted Projects
+      </div>
+      <div class="projects-featured">
+
+        <div class="project-featured-card reveal">
+          <div class="pfc-number">01</div>
+          <div class="pfc-content">
+            <div class="pfc-tag">Finance · Android</div>
+            <h3>Financipline</h3>
+            <p>Personal finance management Android app — track expenses, set budgets, and build financial discipline with an intuitive UI.</p>
+            <div class="pfc-tech"><span>Kotlin</span><span>Android</span><span>Room DB</span></div>
+            <a href="https://github.com/ASRcodes/Financipline" target="_blank" class="pfc-link">
+              <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-featured-card reveal">
+          <div class="pfc-number">02</div>
+          <div class="pfc-content">
+            <div class="pfc-tag">Emergency System · Android</div>
+            <h3>DontMissMoM</h3>
+            <p>Solves critical communication gaps by bypassing silent/DND modes for emergency alerts — ensuring urgent messages always get through.</p>
+            <div class="pfc-tech"><span>Kotlin</span><span>Android</span><span>Notifications API</span></div>
+            <a href="https://github.com/ASRcodes/DontMissMoM" target="_blank" class="pfc-link">
+              <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-featured-card internship-card reveal">
+          <div class="pfc-number">🏢</div>
+          <div class="pfc-content">
+            <div class="pfc-tag internship-tag">Internship · Satya Brand</div>
+            <h3>IJS Mobile App</h3>
+            <p>Production Android app for IIT-JEE School — an educational platform for future IITians, built during the Satya Brand internship with a focus on performance and clean UI.</p>
+            <div class="pfc-tech"><span>Android</span><span>Kotlin</span><span>Production</span></div>
+            <a href="https://github.com/IIT-JEE-School/ijs-mobile-app-android" target="_blank" class="pfc-link">
+              <i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BACKEND PROJECTS -->
+      <div class="projects-cat-label" style="margin-top:52px;">
+        <i class="fas fa-server"></i> Backend &amp; Architecture
+      </div>
+      <div class="projects-grid two-col">
+
+        <div class="project-card-sm backend-card reveal">
+          <div class="pcm-icon backend-icon"><i class="fas fa-sitemap"></i></div>
+          <h4>Department Backend Service</h4>
+          <p>Spring Boot microservice built to master full layered backend architecture — a solid foundation for enterprise-grade APIs.</p>
+          <div class="backend-structure">
+            <span><i class="fas fa-folder-open"></i> controller</span>
+            <span><i class="fas fa-folder-open"></i> dto</span>
+            <span><i class="fas fa-folder-open"></i> entity</span>
+            <span><i class="fas fa-folder-open"></i> service</span>
+            <span><i class="fas fa-folder-open"></i> repository</span>
+            <span><i class="fas fa-folder-open"></i> exception</span>
+            <span><i class="fas fa-folder-open"></i> validation</span>
+          </div>
+          <div class="layer-tech" style="margin-bottom:16px;"><span>Java</span><span>Spring Boot</span><span>Maven</span><span>JPA</span></div>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/Department_backend_service" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card-sm backend-card reveal">
+          <div class="pcm-icon backend-icon"><i class="fas fa-network-wired"></i></div>
+          <h4>BehavioScore — Backend Layer</h4>
+          <p>The Spring Boot REST API powering BehavioScore — handles behavioral data ingestion, scoring endpoints, and bridges the Android frontend with the Python ML engine.</p>
+          <div class="backend-structure">
+            <span><i class="fas fa-folder-open"></i> behavioral-credit-system</span>
+            <span><i class="fas fa-folder-open"></i> BehavioScore-Web</span>
+          </div>
+          <div class="layer-tech" style="margin-bottom:16px;"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST</span></div>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/BehavioScore" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ANDROID PROJECTS -->
+      <div class="projects-cat-label" style="margin-top:52px;">
+        <i class="fab fa-android"></i> Android Projects
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-comments"></i></div>
+          <h4>Social Media App</h4>
+          <p>Firebase-based platform for sharing posts and connecting with friends.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/Socialize" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7235694691113984000" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-paper-plane"></i></div>
+          <h4>Chatting Application</h4>
+          <p>Real-time Firebase chat app for instant messaging.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/Chatting_application" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7238954553096732672" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-music"></i></div>
+          <h4>Offline Music Player</h4>
+          <p>Android music player with offline playback and a minimal UI.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/OfflineMusic_player" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7196891271016132608" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h4>Smart Study Planner</h4>
+          <p>Final year BCA major project — intelligent study schedule organizer.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/StudyPlanner_MajorProject" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-robot"></i></div>
+          <h4>ChatBot App</h4>
+          <p>Conversational AI chatbot with dynamic response capabilities.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/-ChatBotApp" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7193678953671208961" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-gamepad"></i></div>
+          <h4>Tic Tac Toe</h4>
+          <p>Classic game with multiplayer and AI opponent modes.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/TicTacToe" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-sticky-note"></i></div>
+          <h4>Notes App</h4>
+          <p>Clean note-taking app with local storage persistence.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/Notes_App" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card-sm reveal">
+          <div class="pcm-icon"><i class="fas fa-plug"></i></div>
+          <h4>API Learning Project</h4>
+          <p>Practice project — fetch and display data from REST API endpoints.</p>
+          <div class="pcm-links">
+            <a href="https://github.com/ASRcodes/LearningAPI" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">04 — Skills</div>
+      <h2 class="section-title">My <span class="accent">Toolkit</span></h2>
+
+      <div class="skills-layout">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><i class="fab fa-android"></i> Mobile Development</h3>
+          <div class="skill-tags">
+            <span>Android (Kotlin)</span><span>Android Studio</span><span>Firebase</span>
+            <span>Room Database</span><span>Retrofit</span><span>MVVM</span><span>Flutter</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><i class="fas fa-server"></i> Backend Development</h3>
+          <div class="skill-tags">
+            <span>Java</span><span>Spring Boot 3.x</span><span>REST APIs</span>
+            <span>MySQL</span><span>Spring Data JPA</span><span>DTO Pattern</span><span>Exception Handling</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span>Kotlin</span><span>Java</span><span>Python</span><span>C / C++</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><i class="fas fa-brain"></i> AI / ML</h3>
+          <div class="skill-tags">
+            <span>Machine Learning</span><span>NumPy</span><span>Pandas</span>
+            <span>Data Structures</span><span>Algorithms</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title"><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
+          <div class="skill-tags">
+            <span>Git &amp; GitHub</span><span>Docker</span><span>IntelliJ IDEA</span>
+            <span>Postman</span><span>Firebase Console</span><span>Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal current-focus-group">
+          <h3 class="skill-group-title"><i class="fas fa-rocket"></i> Current Focus</h3>
+          <div class="skill-tags">
+            <span class="focus-tag">Spring Boot Mastery</span>
+            <span class="focus-tag">System Design</span>
+            <span class="focus-tag">GSoC 2026</span>
+            <span class="focus-tag">Open Source</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cert-box reveal">
+        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+        <div class="cert-content">
+          <p class="cert-label">Certification</p>
+          <h4>Data Structures &amp; Algorithms</h4>
+          <p>Codedamn · Verified Certificate</p>
+        </div>
+        <a href="https://codedamn.com/certificate/verify/c3049336b867af57437dbfb817c526745601c88a" target="_blank" class="cert-link">
+          Verify <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container contact-inner">
+      <div class="section-label">05 — Contact</div>
+      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+      <p class="contact-desc">
+        Open to internship and full-time opportunities in mobile or backend engineering.
+        Also happy to collaborate on interesting open-source projects.
+      </p>
+      <div class="contact-cards">
+        <a href="mailto:rajsinghrajput7002@gmail.com" class="contact-card reveal">
+          <i class="fas fa-envelope"></i><span>rajsinghrajput7002@gmail.com</span>
+        </a>
+        <a href="https://github.com/ASRcodes" target="_blank" class="contact-card reveal">
+          <i class="fab fa-github"></i><span>github.com/ASRcodes</span>
+        </a>
+        <a href="https://www.linkedin.com/in/anubhav-singh-rajput-9b0632251/" target="_blank" class="contact-card reveal">
+          <i class="fab fa-linkedin"></i><span>LinkedIn Profile</span>
+        </a>
+      </div>
+      <a href="mailto:rajsinghrajput7002@gmail.com" class="btn-primary large">Say Hello 👋</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">AS<span class="dot">.</span></div>
+      <p>Designed &amp; built by Anubhav Singh · 2025</p>
+      <div class="footer-socials">
+        <a href="https://github.com/ASRcodes" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anubhav-singh-rajput-9b0632251/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:rajsinghrajput7002@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    ScrollReveal().reveal('.project-card', { interval: 200, distance: '50px', origin: 'bottom', duration: 800 });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
